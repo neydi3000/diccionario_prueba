@@ -20,9 +20,51 @@ input {
   margin-top: 20px;
   font-size: 18px;
 }
+
+#az {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+#az span {
+  display: inline-block;
+  margin: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#az span:hover {
+  background: #0077b6;
+  color: white;
+}
+
 </style>
 
 <script>
+
+<script>
+function showByLetter(letter) {
+  let r = document.getElementById("result");
+  let html = "<b>Palabras con " + letter + ":</b><br><br>";
+  let found = false;
+
+  for (let word in diccionario) {
+    if (word.charAt(0).toUpperCase() === letter) {
+      html += "• <b>" + word + "</b>: " +
+              diccionario[word].definicion + "<br>";
+      found = true;
+    }
+  }
+
+  r.innerHTML = found ? html : "❌ No hay palabras con " + letter;
+}
+</script>
+
+
 let diccionario = {};
 
 fetch("diccionario.json")
@@ -42,6 +84,8 @@ function searchWord() {
     r.innerHTML = "❌ No encontrada";
   }
 }
+
+
 </script>
 </head>
 
@@ -51,5 +95,20 @@ function searchWord() {
 <input id="search" placeholder="Buscar palabra..." onkeyup="searchWord()">
 
 <div id="result"></div>
+<div id="az">
+  <script>
+    for (let i = 65; i <= 90; i++) {
+      document.write(
+        '<span onclick="showByLetter(\'' +
+        String.fromCharCode(i) +
+        '\')">' +
+        String.fromCharCode(i) +
+        '</span>'
+      );
+    }
+  </script>
+</div>
+
+
 </body>
 </html>
