@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Diccionario Turístico Nicaragua</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #e0f2ff;
+  text-align: center;
+  padding: 40px;
+}
+input {
+  width: 60%;
+  padding: 12px;
+  font-size: 18px;
+}
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+</style>
+
+<script>
+let diccionario = {};
+
+fetch("diccionario.json")
+  .then(r => r.json())
+  .then(d => diccionario = d);
+
+function searchWord() {
+  let w = document.getElementById("search").value.toLowerCase();
+  let r = document.getElementById("result");
+
+  if (diccionario[w]) {
+    r.innerHTML =
+      "<b>" + w + "</b><br>" +
+      diccionario[w].definicion +
+      "<br><i>" + diccionario[w].categoria + "</i>";
+  } else {
+    r.innerHTML = "❌ No encontrada";
+  }
+}
+</script>
+</head>
+
+<body>
+<h1>Diccionario Turístico de Nicaragua 🇳🇮</h1>
+
+<input id="search" placeholder="Buscar palabra..." onkeyup="searchWord()">
+
+<div id="result"></div>
+</body>
+</html>

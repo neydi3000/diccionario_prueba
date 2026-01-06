@@ -1,0 +1,79 @@
+{
+  "aeropuerto": {"categoria":"Viaje","definicion":"Lugar donde llegan y salen aviones."},
+  "aventura": {"categoria":"Turismo","definicion":"Actividad emocionante al aire libre."},
+
+  "bahia": {"categoria":"Naturaleza","definicion":"Entrada del mar rodeada de tierra."},
+  "bus": {"categoria":"Transporte","definicion":"Medio de transporte público."},
+
+  "catedral": {"categoria":"Cultura","definicion":"Iglesia principal de una ciudad."},
+  "canoa": {"categoria":"Naturaleza","definicion":"Embarcación pequeña tradicional."},
+
+  "destino": {"categoria":"Viaje","definicion":"Lugar al que se viaja."},
+  "dulce": {"categoria":"Comida","definicion":"Postre típico nicaragüense."},
+
+  "eco": {"categoria":"Turismo","definicion":"Relacionado con el medio ambiente."},
+  "excursion": {"categoria":"Viaje","definicion":"Salida corta de turismo."},
+
+  "fiesta": {"categoria":"Cultura","definicion":"Celebración popular."},
+  "ferry": {"categoria":"Transporte","definicion":"Barco para cruzar lagos o ríos."},
+
+  "guia": {"categoria":"Turismo","definicion":"Persona que orienta a los turistas."},
+  "gallo": {"categoria":"Comida","definicion":"Plato típico nicaragüense."},
+
+  "hotel": {"categoria":"Hospedaje","definicion":"Lugar para alojarse."},
+  "hamaca": {"categoria":"Cultura","definicion":"Tela para descansar."},
+
+  "isla": {"categoria":"Naturaleza","definicion":"Tierra rodeada de agua."},
+  "iglesia": {"categoria":"Cultura","definicion":"Lugar religioso."},
+
+  "jaguar": {"categoria":"Fauna","definicion":"Animal salvaje de Centroamérica."},
+  "jugo": {"categoria":"Comida","definicion":"Bebida natural de frutas."},
+
+  "kayak": {"categoria":"Aventura","definicion":"Deporte acuático."},
+  "kilometro": {"categoria":"Viaje","definicion":"Unidad de distancia."},
+
+  "laguna": {"categoria":"Naturaleza","definicion":"Cuerpo de agua natural."},
+  "lancha": {"categoria":"Transporte","definicion":"Barco pequeño con motor."},
+
+  "mercado": {"categoria":"Cultura","definicion":"Lugar para comprar productos locales."},
+  "mochila": {"categoria":"Viaje","definicion":"Bolso para viajeros."},
+
+  "naturaleza": {"categoria":"Turismo","definicion":"Ambiente natural del país."},
+  "navegar": {"categoria":"Aventura","definicion":"Desplazarse por agua."},
+
+  "oleaje": {"categoria":"Naturaleza","definicion":"Movimiento del mar."},
+  "ometepe": {"categoria":"Destino","definicion":"Isla famosa en Nicaragua."},
+
+  "playa": {"categoria":"Turismo","definicion":"Zona costera para recreación."},
+  "pueblo": {"categoria":"Cultura","definicion":"Comunidad pequeña tradicional."},
+
+  "quesillo": {"categoria":"Comida","definicion":"Comida típica nicaragüense."},
+  "quipote": {"categoria":"Coloquial","definicion":"Objeto sin nombre específico."},
+
+  "rio": {"categoria":"Naturaleza","definicion":"Corriente natural de agua."},
+  "reserva": {"categoria":"Naturaleza","definicion":"Área protegida."},
+
+  "surf": {"categoria":"Aventura","definicion":"Deporte acuático."},
+  "sombrero": {"categoria":"Cultura","definicion":"Protección contra el sol."},
+
+  "taxi": {"categoria":"Transporte","definicion":"Vehículo de transporte privado."},
+  "tour": {"categoria":"Turismo","definicion":"Recorrido turístico."},
+
+  "urbano": {"categoria":"Viaje","definicion":"Relacionado con la ciudad."},
+  "ubicacion": {"categoria":"Viaje","definicion":"Lugar donde algo se encuentra."},
+
+  "volcan": {"categoria":"Naturaleza","definicion":"Montaña con actividad volcánica."},
+  "viaje": {"categoria":"Turismo","definicion":"Desplazamiento a otro lugar."},
+
+  "wifi": {"categoria":"Servicios","definicion":"Conexión a internet."},
+  "walking": {"categoria":"Turismo","definicion":"Recorrido a pie."},
+
+  "xiloa": {"categoria":"Destino","definicion":"Laguna volcánica cerca de Managua."},
+  "xpress": {"categoria":"Transporte","definicion":"Servicio rápido."},
+
+  "yuca": {"categoria":"Comida","definicion":"Raíz muy consumida."},
+  "yate": {"categoria":"Transporte","definicion":"Barco de recreo."},
+
+  "zona": {"categoria":"Viaje","definicion":"Área específica."},
+  "zipline": {"categoria":"Aventura","definicion":"Deslizamiento por cable."}
+}
