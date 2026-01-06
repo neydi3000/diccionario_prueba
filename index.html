@@ -6,18 +6,27 @@
 
 <style>
 body {
-  font-family: Arial;
-  background: #e0f2ff;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#dff1ff, #ffffff);
   text-align: center;
-  padding: 40px;
+  padding: 30px;
 }
+
+h1 {
+  color: #0077b6;
+}
+
 input {
-  width: 60%;
-  padding: 12px;
+  width: 65%;
+  padding: 14px;
   font-size: 18px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
 }
+
 #result {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 18px;
 }
 
@@ -32,7 +41,7 @@ input {
   margin: 4px;
   padding: 6px 10px;
   cursor: pointer;
-  background: #ddd;
+  background: #e0e0e0;
   border-radius: 4px;
   font-weight: bold;
 }
@@ -41,12 +50,37 @@ input {
   background: #0077b6;
   color: white;
 }
-
 </style>
 
 <script>
+let diccionario = {};
 
-<script>
+// Cargar JSON
+fetch("diccionario.json")
+  .then(r => r.json())
+  .then(d => diccionario = d);
+
+// Buscar palabra
+function searchWord() {
+  let w = document.getElementById("search").value.toLowerCase();
+  let r = document.getElementById("result");
+
+  if (!w) {
+    r.innerHTML = "";
+    return;
+  }
+
+  if (diccionario[w]) {
+    r.innerHTML =
+      "<b>" + w + "</b><br>" +
+      diccionario[w].definicion +
+      "<br><i>Categoría: " + diccionario[w].categoria + "</i>";
+  } else {
+    r.innerHTML = "❌ Palabra no encontrada";
+  }
+}
+
+// Mostrar palabras por letra
 function showByLetter(letter) {
   let r = document.getElementById("result");
   let html = "<b>Palabras con " + letter + ":</b><br><br>";
@@ -63,52 +97,30 @@ function showByLetter(letter) {
   r.innerHTML = found ? html : "❌ No hay palabras con " + letter;
 }
 </script>
-
-
-let diccionario = {};
-
-fetch("diccionario.json")
-  .then(r => r.json())
-  .then(d => diccionario = d);
-
-function searchWord() {
-  let w = document.getElementById("search").value.toLowerCase();
-  let r = document.getElementById("result");
-
-  if (diccionario[w]) {
-    r.innerHTML =
-      "<b>" + w + "</b><br>" +
-      diccionario[w].definicion +
-      "<br><i>" + diccionario[w].categoria + "</i>";
-  } else {
-    r.innerHTML = "❌ No encontrada";
-  }
-}
-
-
-</script>
 </head>
 
 <body>
+
 <h1>Diccionario Turístico de Nicaragua 🇳🇮</h1>
 
 <input id="search" placeholder="Buscar palabra..." onkeyup="searchWord()">
 
 <div id="result"></div>
-<div id="az">
-  <script>
-    for (let i = 65; i <= 90; i++) {
-      document.write(
-        '<span onclick="showByLetter(\'' +
-        String.fromCharCode(i) +
-        '\')">' +
-        String.fromCharCode(i) +
-        '</span>'
-      );
-    }
-  </script>
-</div>
 
+<div id="az">
+<script>
+for (let i = 65; i <= 90; i++) {
+  document.write(
+    '<span onclick="showByLetter(\'' +
+    String.fromCharCode(i) +
+    '\')">' +
+    String.fromCharCode(i) +
+    '</span>'
+  );
+}
+</script>
+</div>
 
 </body>
 </html>
+
